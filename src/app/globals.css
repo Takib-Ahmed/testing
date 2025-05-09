@@ -1,0 +1,241 @@
+@import "tailwindcss";
+
+:root {
+  --background: #0a0a0a;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+@layer utilities {
+  .font-RethinkSans {
+    font-family: var(--font-rethink-sans), sans-serif;
+  }
+  .font-DMSans {
+    font-family: var(--font-dm-sans), sans-serif;
+    font-weight: 500;
+    letter-spacing: 0%;
+  }
+}
+
+html{
+  overflow-x: hidden !important;
+}
+body {
+  background: var(--background);
+  color: var(--foreground);
+  overflow: hidden;
+}
+
+.Hero {
+  background: url(/FullBgs/Herobg.svg) no-repeat top;
+  background-size: cover;
+}
+.Button {
+  background: linear-gradient(96.28deg, #73bffa 2.11%, #3c97f5 113.83%);
+  border-radius: 48px;
+}
+.herotext {
+  background: radial-gradient(
+      29.86% 95.67% at 48.51% 59.31%,
+      #ffffff 47.7%,
+      rgba(255, 255, 255, 0.5) 100%
+    )
+    /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+  color: transparent;
+  background-clip: text;
+}
+
+.Services {
+  background: url(/FullBgs/Servicesbg.svg) no-repeat bottom;
+  background-size: cover;
+}
+
+.Service {
+  border: 1.4px solid ;
+
+  /* border-image-source: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.5) 0%,
+    rgba(255, 255, 255, 0.3) 100%
+  );
+   */
+  background-size: cover;
+  background-color: #0b0b0f;
+  background: linear-gradient(to bottom right, #0b0b0f, #121217);
+}
+
+.faqs {
+  background: linear-gradient(
+    90deg,
+    rgba(115, 191, 250, 0.2) 0%,
+    rgba(10, 10, 10, 0) 100%
+  );
+}
+.numbers {
+  background: linear-gradient(
+    114.35deg,
+    #3c97f5 5.43%,
+    #73bffa 43.08%,
+    #93d1fd 92.31%
+  );
+  color: transparent;
+  background-clip: text;
+}
+footer {
+  background: url(/FullBgs/Footerbg.svg) no-repeat top;
+  background-size: cover;
+}
+
+.footer-text {
+
+  background: radial-gradient(
+      20.45% 109.09% at 25.34% 68.18%,
+      #93d1fd 49.03%,
+      rgba(147, 209, 253, 0.5) 100%
+    )
+    
+    /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+    color: transparent;
+    background-clip: text;
+ 
+
+}
+.footeremail{
+  letter-spacing: 0%;
+  text-align: center;
+  text-decoration: underline ;
+  text-decoration-style:  solid  ;
+  text-decoration-thickness: 5%;
+}
+/* .slick-slide div {
+  margin: 0 20px;
+} */
+.slick-dots li.slick-active button::before {
+  color: white;
+  font-size: 15px;
+  margin: -1px 0 0 -3px;
+}
+
+
+.slick-dots li button {
+  background-color: rgba(255, 255, 255, 0.438);
+  border-radius: 9999px;
+  position: relative;
+  width: 15px;
+  height: 15px;
+  
+}
+
+
+
+.slick-dots li button::before {
+  background: none;
+  color: transparent;
+}
+
+
+
+/* Add spacing between the slide items */
+.slick-slide div {
+  padding: 0 -10px; /* Adjust the value for the gap between slides */
+  margin: 0 10px;
+}
+
+
+.mySwiper .swiper-slide {
+  transition: opacity 0.5s ease, transform 0.5s ease;
+
+}
+.mySwiper .swiper-slide-active {
+  opacity: 1;
+  transform: scale(1.1) !important;
+  z-index: 999 !important;
+
+}
+.mySwiper {
+  overflow: visible !important;
+}
+.servicecard{
+.inner-card {
+  background: url(/FullBgs/Stairs.svg)  !important;
+  background-size: cover;
+}
+
+
+  
+ 
+}
+
+
+.circulerBG{
+   background: url(/FullBgs/CirculerBg.svg)  center no-repeat;
+   background-size: contain;
+}
+
+
+
+
+@media (max-width: 1200px) {
+  .servicecard{
+    transform: translate(0) !important;
+  }
+}
+
+@media (max-width: 1400px) {
+  .responsive-box {
+    width: 30vw !important;
+    height: 20vw !important;
+  }
+  
+}
+@media (max-width: 1000px) {
+  .mySwiper{
+    transform: translateX(-5%);
+  }
+
+  .responsive-box {
+    width: 40vw !important;
+    height: 25vw !important;
+  }
+}
+@media (max-width: 770px) {
+  .mySwiper{
+    transform: translateX(-10%);
+  }
+
+  .responsive-box {
+    width: 40vw !important;
+    height: 25vw !important;
+  }
+}
+
+@media (max-width: 550px) {
+  .mySwiper{
+    transform: translateX(-20%);
+  }
+  .responsive-box {
+    width: 50vw !important;
+    height: 30vw !important;
+  }
+}
+
+@media (max-width: 450px) {
+  .mySwiper{
+    transform: translateX(-20%);
+  }
+
+}
+
